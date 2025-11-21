@@ -1,12 +1,15 @@
-<?php session_start();
-if (isset($_POST['menus'])) {
-    $_SESSION['menu'] = $_POST['menus'];
+<?php session_start(); 
+    if (isset($_POST['menus'])) {
+        $_SESSION['menu'] = $_POST['menus'];
+    }
+    $conn = mysqli_connect('localhost', 'root', 'root', 'scidata', 3306);
+    if (isset($_SESSION['menu'])) {
+        $show_footer = true;
+    }
+ else {
+    $show_footer = false;
 }
-if (isset($_SESSION['menu'])) {
-    $conn = mysqli_connect("localhost", "scifre_sciuser", "sciweb18", "scifre_scidata");
-    mysqli_set_charset($conn, "utf8");
-}
-
+        
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -16,8 +19,7 @@ if (isset($_SESSION['menu'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#202741" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0B0B0BFF" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
-    <link rel="icon" type="image/png" href="Icons/icon.png">
+    <link rel="shortcut icon" href="Images/logosci1Asset 4@4x.webp" type="image/x-icon">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="alert.js"></script>
@@ -25,12 +27,6 @@ if (isset($_SESSION['menu'])) {
     <link rel="stylesheet" href="footer/footer.css">
     <title>منو</title>
     <style>
-        @font-face {
-            font-family: iran;
-            src: url('font/IRANYekanXVF.woff');
-            font-display: block;
-        }
-
         body {
             margin: 0;
             padding: 0;
@@ -223,15 +219,13 @@ if (isset($_SESSION['menu'])) {
 </head>
 
 <body id="body">
-    <div id="loading_control">
-        <img id="loading" src="Images/com-optimize-1--unscreen-ezgif.com-optimize.gif" alt="error">
-    </div>
+<div id="loading_control">
+    <img id="loading" src="Images/com-optimize-1--unscreen-ezgif.com-optimize.gif" alt="error">
+</div>
 
-    <div id="content1">
-        <?php
-        if (isset($_SESSION['menu'])) {
-            include("header/header.php"); ?>
-            <main>
+            <div id="content1">
+                <?php include("header/header.php"); ?>
+                <main>
                 <h2 style="text-align:center;width:auto; max-width: 280px;display:flex; justify-content: center;
         justify-self: center;border-bottom:2px solid orange;"><?php echo $_SESSION['menu']; ?></h2>
                 <div class="show_hidden">
@@ -243,7 +237,7 @@ if (isset($_SESSION['menu'])) {
                             ?>
                             <div id="box_product">
                                 <div id="product_img">
-                                    <img src="<?php echo "Icons/" . $row['product_img']; ?>" alt="error">
+                                    <img src="<?php echo "icons/" . $row['product_img']; ?>" alt="error">
                                 </div>
                                 <div id="box_text_btn">
                                     <h1><?php echo $row['product_name']; ?></h1>
@@ -254,21 +248,22 @@ if (isset($_SESSION['menu'])) {
                         }
                     }
 
-                    ?>
-                    <br>
-                </div>
+    ?>
+                <br>
+            </div>
         </div>
-        </main>
-        <?php
+    </main>
+    <?php
+    if ($show_footer != false) {
         include("footer/footer.php");
-        ?>
-        <!--tippy-->
-        <script src="https://unpkg.com/popper.js@1"></script>
-        <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
-        <!--tippy-->
-        <script src="header/header.js"></script>
-        <?php include('check_login_alert.php');
-        } ?>
+    }
+    ?>
+    <!--tippy-->
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+    <!--tippy-->
+    <script src="header/header.js"></script>
+    <?php include('check_login_alert.php'); ?>
 </body>
 
 </html>

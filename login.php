@@ -17,28 +17,56 @@ if (isset($_GET['error']) && $_GET['error'] == 1) {
     <meta name="viewport" content="width=device-width">
     <meta name="theme-color" content="#202741" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0B0B0BFF" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
-    <link rel="icon" type="image/png" href="Icons/icon.png">
+    <link rel="shortcut icon" href="Images/logosci1Asset 4@4x.webp" type="image/x-icon">
     <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <title>صفحه ورود سایت</title>
     <style>
-            #loading_control {
+        #loading {
             position: fixed;
-            transform: translate(-50%, -50%) scale(1.5);
-            left: 50%;
-            top: 50%;
-            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.4);
+            /* دودی نیمه‌شفاف */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Tahoma, sans-serif;
+            z-index: 9999;
         }
 
-        #loading {
-            width: auto;
-            height: 50px;
+        .dots::after {
+            content: "";
+            display: inline-block;
+            animation: dots 1.2s steps(3, end) infinite;
         }
-        #content {
-            height: auto;
-            opacity: 0%;
-            transition: 0.5s 0s;
+
+        @keyframes dots {
+            0% {
+                content: "";
+            }
+
+            33% {
+                content: ".";
+            }
+
+            66% {
+                content: "..";
+            }
+
+            100% {
+                content: "...";
+            }
         }
+
+        .loading-text {
+            color: white;
+            font-size: 24px;
+        }
+
         @font-face {
             font-family: "ourfont";
             src: url('font/IRANYekanXVF.woff');
@@ -90,7 +118,9 @@ if (isset($_GET['error']) && $_GET['error'] == 1) {
             border-radius: 120px;
         }
 
-  
+        div {
+       
+        }
 
         #i1 {
             color: rgb(67, 148, 168);
@@ -156,8 +186,7 @@ if (isset($_GET['error']) && $_GET['error'] == 1) {
         window.addEventListener("load", function () {
             setTimeout(function () {
                 document.getElementById("loading").style.display = "none";
-                content.style.opacity = '100%';
-            }, 500); // تاخیر ۲ ثانیه‌ای برای تست
+            }, 2000); // تاخیر ۲ ثانیه‌ای برای تست
         });//پایان بخش loding
 
 
@@ -229,21 +258,10 @@ if (isset($_GET['error']) && $_GET['error'] == 1) {
                     confirmButtonText: "ok"
                 });
             }
-            else if (pass.length < 6) {
+            else if (pass.length !== 9) {
                 Swal.fire({
                     title: "هشدار",
-                    text: "گذرواژه باید بیشتر از 6  کاراکتر باشد",
-                    icon: "warning",
-                    showCancelButton: false,
-                    confirmButtonColor: "#3085d6",
-                    confirmButtonText: "ok"
-                });
-                document.getElementById('i2').value = "";
-            }
-            else if (pass.length > 9) {
-                Swal.fire({
-                    title: "هشدار",
-                    text: "گذرواژه باید کمتر از 9  کاراکتر باشد",
+                    text: "گذرواژه باید 9 کاراکتر باشد",
                     icon: "warning",
                     showCancelButton: false,
                     confirmButtonColor: "#3085d6",
@@ -262,12 +280,14 @@ if (isset($_GET['error']) && $_GET['error'] == 1) {
 
 <body>
     <!-- بخش لودینگ -->
-    <div id="loading_control">
-        <img id="loading" src="Images/com-optimize-1--unscreen-ezgif.com-optimize.gif" alt="error">
+    <div id="loading">
+        <div class="loading-text">
+            در حال بارگذاری<span class="dots"></span>
+        </div>
     </div>
-    <div id="content">
+
     <form name="ourform" action="check_login.php" method="post" autocomplete="off">
-        <img src="Images/human.jpg" id="img_style"><br>
+        <img src="images/human.jpg" id="img_style"><br>
         <div>
             <input type="text" id="i1" name="i1" placeholder="نام کاربری" autocomplete="off"><br><br>
             <input type="password" id="i2" name="i2" placeholder="گذرواژه" autocomplete="new-password"><br><br>
@@ -282,7 +302,7 @@ if (isset($_GET['error']) && $_GET['error'] == 1) {
             <button type="reset" id="b2">پاک کردن</button>
         </div>
     </form>
-    </div>
+
 </body>
 
 </html>

@@ -6,7 +6,7 @@ if (isset($_POST['i1']) && isset($_POST['i2'])) {
     $username=$_POST['i1'];
     $password=$_POST['i2'];
 
-    $link=mysqli_connect("localhost","scifre_sciuser","sciweb18","scifre_scidata");
+    $link=mysqli_connect("localhost","root","root","scidata",3306);
     $link->set_charset("utf8");
     $myquery="SELECT `rowid`, `fandlname`, `username`, `phone`, `password` FROM `user` WHERE username='$username' AND password='$password'";
     $result=mysqli_query($link,$myquery);

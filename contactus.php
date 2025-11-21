@@ -6,15 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#202741" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B0B0BFF" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
-  <link rel="icon" type="image/png" href="Icons/icon.png">
+  <link rel="shortcut icon" href="Images/logosci1Asset 4@4x.webp" type="image/x-icon">
   <link rel="stylesheet" href="header/header.css">
   <link rel="stylesheet" href="footer/footer.css">
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
   <title>صفحه تماس با ما</title>
   <style>
-
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.4);
+      /* دودی نیمه‌شفاف */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: ourfont;
+      z-index: 9999;
+    }
 
     .dots::after {
       content: "";
@@ -226,9 +240,11 @@
 <body id="body">
 
   <!-- بخش لودینگ -->
-  <div id="loading_control">
-    <img id="loading" src="Images/com-optimize-1--unscreen-ezgif.com-optimize.gif" alt="error">
-</div>
+  <div id="loading">
+    <div class="loading-text">
+      در حال بارگذاری<span class="dots"></span>
+    </div>
+  </div>
   <div id="content">
   <?php include('header/header.php'); ?>
   <main>
@@ -237,40 +253,40 @@
 
       <div class="container">
         <div class="image-side">
-          <img src="Images/file_00000000b18461f7aa15277d31b7905e.png" alt="نماینده پشتیبانی" />
+          <img src="images/file_00000000b18461f7aa15277d31b7905e.png" alt="نماینده پشتیبانی" />
         </div>
 
         <div class="info-side">
           <div class="info-item">
-            <img src="Images/pin.png" alt="آدرس" />
+            <img src="images/pin.png" alt="آدرس" />
             <span>آدرس: استان گیلان - رشت - خیابان انقلاب (حاجی آباد) - بن بست صالحی - ساختمان نازنین - طبقه دوم - واحد
               5</span>
           </div>
           <div class="info-item">
-            <img src="Images/telephone.png" alt="تلفن" />
+            <img src="images/telephone (1).png" alt="تلفن" />
             <span>تلفن ثابت: 013-33263694</span>
           </div>
           <div class="info-item">
-            <img src="Images/mobile-phone.png" alt="موبایل" />
+            <img src="images/mobile-phone (2).png" alt="موبایل" />
             <span>تلفن همراه: 09112313980 - 09112388013</span>
           </div>
           <div class="info-item">
-            <img src="Images/email.png" alt="ایمیل" />
+            <img src="images/email (1).png" alt="ایمیل" />
             <span>جیمیل: faaz_saemifard@gmail.com</span>
           </div>
           <div class="info-item">
-            <img src="Images/globe.png" alt="وب" />
+            <img src="images/globe.png" alt="وب" />
             <span>آدرس وب‌سایت: www.saemifard.com</span>
           </div>
 
           <div class="profile-menu">
-            <img src="Images/telegram_image.png" alt="Telegram" class="icon-img" onclick="toggleMenu()" />
+            <img src="images/telegram_image.png" alt="Telegram" class="icon-img" onclick="toggleMenu()" />
             <div class="menu-content" id="telegramMenu">
               <a href="https://t.me/saemifardfaraz" target="_blank">حساب اول</a>
               <a href="https://t.me/narasg" target="_blank">حساب دوم</a>
             </div>
             <a href="https://web.rubika.ir/#c=u0BDt7m03fbb995549a8a55ea79d670f" target="_blank">
-              <img src="Images/rubikapng.parspng.com_-300x300.png" alt="rubika" class="icon-img2"
+              <img src="images/rubikapng.parspng.com_-300x300.png" alt="rubika" class="icon-img2"
                 style="margin-bottom: 5px;">
             </a>
           </div>

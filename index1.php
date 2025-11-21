@@ -16,8 +16,7 @@ if (isset($_POST['menus'])) {
     <meta name="description"
         content="آموزشگاه فنی و حرفه ای آزاد صائمی فرد , آموزشگاه  , برنامه نویسی , طراحی وب , حسابداری , صنایع خودرو , تدریس دروس دانشگاهی , کامپیوتر , دوره مقدماتی , html , js , wordpress , php ,  ai , AI ,  css , هوش مصنوعی">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
-    <link rel="icon" type="image/png" href="Icons/icon.png">
+    <link rel="shortcut icon" href="Images/logosci1Asset 4@4x.webp" type="image/x-icon">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="alert.js"></script>
@@ -32,7 +31,7 @@ if (isset($_POST['menus'])) {
         <?php include('header/header.php'); ?>
         <main>
             <div id="box_first_img">
-            <img id="img_first" src="Images/background.webp" alt="error">
+                <img id="img_first" src="Images/logosciAsset 64x (1).webp" alt="عکس شما بارگذاری نشد">
             </div>
             <!--box_title_rectangle-->
             <div id="box_title_rectangle">
@@ -83,8 +82,7 @@ if (isset($_POST['menus'])) {
                 </div>
                 <div id="spicial">
                     <?php
-                    $conn = mysqli_connect("localhost","scifre_sciuser","sciweb18","scifre_scidata");
-                    mysqli_set_charset($conn, "utf8");
+                    $conn = mysqli_connect('localhost', 'root', 'root', 'scidata', 3306);
                     $sql = "SELECT * FROM `product` ORDER BY product_view DESC LIMIT 3";
                     $result = mysqli_query($conn, $sql);
                     if ($result->num_rows > 0) {
@@ -93,7 +91,7 @@ if (isset($_POST['menus'])) {
                             <div class="show_hidden">
                                 <div id="box_product">
                                     <div id="product_img">
-                                        <img src="<?php echo "Icons/" . $row['product_img']; ?>" alt="error">
+                                        <img src="<?php echo "icons/" . $row['product_img']; ?>" alt="error">
                                     </div>
                                     <div id="box_text_btn">
                                         <h1><?php echo $row['product_name']; ?></h1>

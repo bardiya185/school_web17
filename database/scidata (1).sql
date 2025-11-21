@@ -102,10 +102,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`rowid`, `fandlname`, `username`, `phone`, `password`, `color_profile`) VALUES
-(1, 'سیدرضا میرمحمدی', 'seyed', '09334274074', 'R4274074m', '#4C5D7EFF'),
-(2, 'غلامعلی صائمی فرد', 'saemi', '09113388013', 'g1234567s', '#4C5D7EFF'),
-(3, 'بردیا واحدی', 'bardiya', '09371967351', 'B1234567v', '#4C5D7EFF'),
-(7, 'بردیا واحدی', 'bardiya18', '09371967351', 'bardiya12', 'rgb(255, 181, 98)');
+(1, 'سیدرضا ', 'seyed', '09334274077', 'R4274074m', '#4C5D7EFF'),
+(2, 'غلامعلی صائمی ', 'saemi', '09113388015', 'g1234567s', '#4C5D7EFF'),
+(3, 'بردیا ', 'bardiya', '09371967353', 'B1234567v', '#4C5D7EFF'),
+(7, 'بردیا ', 'bardiya56', '09371967352', 'bardiya166', 'rgb(255, 181, 98)');
 
 --
 -- Indexes for dumped tables

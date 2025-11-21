@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#202741" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0B0B0BFF" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
-    <link rel="icon" type="image/png" href="Icons/icon.png">
+    <link rel="shortcut icon" href="Images/logosci1Asset 4@4x.webp" type="image/x-icon">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="header/header.css">
@@ -121,7 +120,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 20px;
-            width:100%;
+            width: 60%;
             max-width: 1000px;
             margin: 0 auto;
             background-color: #202741;
@@ -152,11 +151,11 @@
 
 
 
-        @media screen and (max-width:1100px) {
+        @media screen and (max-width:1024px) {
 
             .gallery-container {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 gap: 20px;
                 padding: 20px;
                 width: 80%;
@@ -277,13 +276,13 @@
                     <a href="Images/IMG_20250712_105153.jpg" target="_self"><img src="Images/IMG_20250712_105153.jpg" alt="error"></a>
                 </div>
                 <div class="gallery-item">
-                <a href="Images/1000030902.jpg" target="_self"><img src="Images/1000030902.jpg" alt="error"></a>
+                <a href="Images/enemad.png" target="_self"><img src="Images/enemad.png" alt="error"></a>
                 </div>
                 <div class="gallery-item">
-                <a href="Images/1000030903.jpg" target="_self"><img src="Images/1000030903.jpg" alt="error"></a>
+                <a href="Images/logosci1Asset 4@4x.webp" target="_self"><img src="Images/logosci1Asset 4@4x.webp" alt="error"></a>
                 </div>
                 <div class="gallery-item">
-                <a href="Images/IMG_20250712_161001.jpg" target="_self"><img src="Images/IMG_20250712_161001.jpg" alt="error"></a>
+                <a href="Images/logosciAsset 5@4x.webp" target="_self"><img src="Images/logosciAsset 5@4x.webp" alt="error"></a>
                 </div>
             </div>
 

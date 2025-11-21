@@ -6,9 +6,7 @@ if (isset($_COOKIE['user_auto_login'])) {
     if ($_COOKIE['user_auto_login'] != '') {
         $login = 'true';
         //
-        $conn = mysqli_connect("localhost", "scifre_sciuser", "sciweb18", "scifre_scidata");
-        //$conn = mysqli_connect("localhost", "root", "root", "scidata");
-        mysqli_set_charset($conn, "utf8");
+        $conn = mysqli_connect("localhost", "root", "root", "scidata", 3306);
         $sql = "SELECT color_profile FROM `user` WHERE username='$_COOKIE[user_auto_login]'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) == 1) {
@@ -18,8 +16,7 @@ if (isset($_COOKIE['user_auto_login'])) {
         }
         //
         if (isset($_POST['change_color'])) {
-            $conn = mysqli_connect("localhost", "scifre_sciuser", "sciweb18", "scifre_scidata");
-            mysqli_set_charset($conn, "utf8");
+            $conn = mysqli_connect("localhost", "root", "root", "scidata", 3306);
             $sql = "UPDATE  `user`  SET color_profile = '$_POST[change_color]'  WHERE username='$_COOKIE[user_auto_login]'";
             $result = mysqli_query($conn, $sql);
             //
@@ -50,12 +47,10 @@ if (isset($_COOKIE['user_auto_login'])) {
 
 
 ?>
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         var login = '<?php echo $login ?>';
         var color = '<?php echo $color ?>';
-
         var username = '<?php
         if (isset($_COOKIE['user_auto_login'])) {
             echo $_COOKIE['user_auto_login'];
@@ -65,8 +60,8 @@ if (isset($_COOKIE['user_auto_login'])) {
             title: "<strong>" + username + "</strong>",
             icon: "success",
             html: `
-            ورود با موفقیت انجام شد
-            `,
+                ورود با موفقیت انجام شد
+                `,
             showCloseButton: true,
             showConfirmButton: true,
             showDenyButton: false,
@@ -76,13 +71,10 @@ if (isset($_COOKIE['user_auto_login'])) {
         }, 500);
     }
     if (login == 'true') {
-        tippy('#btn_in', {
-            content: `${username}`
-        });
-
-        btn_in.innerHTML = username.charAt(0).toUpperCase().trim();
-
-
+        // tippy('#btn_in', {
+        //     content: `${username}`
+        // });
+        btn_in.innerHTML = username.charAt(0);
         box_btn_in.style.left = '90px';
         btn_in.style.fontSize = '17px';
         btn_in.style.borderRadius = '50px';
@@ -111,7 +103,4 @@ if (isset($_COOKIE['user_auto_login'])) {
         localStorage.setItem('status_login', 'false');
     }
     });
-
-
-
 </script>

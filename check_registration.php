@@ -8,7 +8,7 @@ if (isset($_POST['i1']) && isset($_POST['i2']) && isset($_POST['i3']) && isset($
     $phone=$_POST['i3'];
     $password=$_POST['i4'];
 
-    $link=mysqli_connect("localhost","scifre_sciuser","sciweb18","scifre_scidata");
+    $link=mysqli_connect("localhost","root","root","scidata",3306);
     $link->set_charset("utf8");
     
     $myquerymain="SELECT `rowid`, `fandlname`, `username`, `phone`, `password` FROM `user` WHERE fandlname='$fullname' AND username='$username' AND phone='$phone' AND password='$password'";
@@ -18,7 +18,7 @@ if (isset($_POST['i1']) && isset($_POST['i2']) && isset($_POST['i3']) && isset($
         exit();
     }
     else{
-        $link=mysqli_connect("localhost","scifre_sciuser","sciweb18","scifre_scidata");
+        $link=mysqli_connect("localhost","root","root","scidata",3306);
         $link->set_charset("utf8");
         $myquery1="SELECT `rowid`, `fandlname`, `username`, `phone`, `password` FROM `user` WHERE username='$username'";
         $result1=mysqli_query($link,$myquery1);

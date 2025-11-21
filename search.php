@@ -220,8 +220,7 @@
 
 <body>
     <?php
-    $conn = mysqli_connect("localhost","scifre_sciuser","sciweb18","scifre_scidata");
-    mysqli_set_charset($conn, "utf8");
+    $conn = mysqli_connect('localhost', 'root', 'root', 'scidata', 3306);
     $search_text = '';
 
     if (isset($_POST['search'])) {
@@ -239,7 +238,7 @@
                 <div class="show_hidden1">
                     <div id="box_product1">
                         <div id="product_img1">
-                            <img src="<?php echo "Icons/" . $row['product_img']; ?>" alt="error">
+                            <img src="<?php echo "icons/" . $row['product_img']; ?>" alt="error">
                         </div>
                         <div id="box_text_btn1">
                             <h1><?php echo $row['product_name']; ?></h1>

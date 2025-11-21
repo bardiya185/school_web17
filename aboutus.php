@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#202741" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#0B0B0BFF" media="(prefers-color-scheme: dark)">
-    <link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
-    <link rel="icon" type="image/png" href="Icons/icon.png">
+    <link rel="shortcut icon" href="Images/logosci1Asset 4@4x.webp" type="image/x-icon">
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="header/header.css">
@@ -22,7 +21,22 @@
             padding: 0;
         }
 
-
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.4);
+            /* دودی نیمه‌شفاف */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Tahoma, sans-serif;
+            z-index: 9999;
+        }
 
         .dots::after {
             content: "";
@@ -38,11 +52,11 @@
             33% {
                 content: ".";
             }
-
+            
             66% {
                 content: "..";
             }
-
+            
             100% {
                 content: "...";
             }
@@ -90,7 +104,7 @@
             justify-content: center;
             justify-items: center;
         }
-
+        
         .about-logo {
             display: block;
             margin: 0 auto 20px auto;
@@ -115,13 +129,13 @@
         }
 
         .about-image {
-
+            
             width: 100%;
-            border-radius: 10px;
+            border-radius: 20px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             margin-top: 40px;
         }
-
+        
         .about-caption {
             margin-top: 16px;
             font-size: 18px;
@@ -140,7 +154,7 @@
             color: aliceblue;
         }
 
-
+        
         .about-text h1 {
             font-size: 20px;
             color: #007bff;
@@ -174,12 +188,12 @@
             border-radius: 8px;
             color: #05021a;
         }
-
+        
         .contact-hint a {
             color: #007bff;
             text-decoration: none;
         }
-
+        
         /* انیمیشن ظاهر شدن */
         .fade-in {
             opacity: 0;
@@ -187,14 +201,14 @@
             animation: fadeInUp 1s ease-out forwards;
             animation-delay: 0.2s;
         }
-
+        
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
+        
         /* ریسپانسیو برای موبایل */
         @media screen and (max-width: 768px) {
             .about-container {
@@ -206,48 +220,31 @@
                 max-width: 80%;
                 padding: 20px;
                 display: flex;
-                justify-self: center;
+                justify-self:center;
             }
         }
-
+        
         #first_text_in_search {
             color: white;
         }
-
-
-        #manageres{
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: space-around;
-            color: aliceblue;
-            flex-direction: row;
-            text-align: center;
-            line-height: 20px;
-            gap: 10px;
-        }
-        #manageres img{
-            width: 50px;
-            height: 50px;
-            margin-bottom: -10px;
-            border-radius: 50px;
-        }
-        #manageres strong{
-background-color:#4452B8FF;
-border-radius: 5px;
-padding: 2px;
-        }
-        #manageres p{
-  font-size: 15px;
-        }
-    </style>
-    <?php include('check_login_alert.php'); ?>
+        </style>
+        <?php include('check_login_alert.php'); ?>
+    <script>
+        //شروع بخش loding
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.getElementById("loading").style.display = "none";
+            }, 2000); // تاخیر ۲ ثانیه‌ای برای تست
+        });//پایان بخش loding
+    </script>
 </head>
 
 <body id="body">
     <!-- بخش لودینگ -->
-    <div id="loading_control">
-        <img id="loading" src="Images/com-optimize-1--unscreen-ezgif.com-optimize.gif" alt="error">
+    <div id="loading">
+        <div class="loading-text">
+            در حال بارگذاری<span class="dots"></span>
+        </div>
     </div>
     <div id="content">
         <?php include('header/header.php'); ?>
@@ -257,7 +254,7 @@ padding: 2px;
                 <div class="about-container">
                     <div class="about-image-wrapper">
                         <img src="Images/logosci1Asset 4@4x.webp" alt="logo" class="about-logo">
-                        <img src="Images/amozeshgah.jpg" alt="amozeshgah" class="about-image">
+                        <img src="images/amozeshgah.jpg" alt="amozeshgah" class="about-image">
                         <p class="about-caption">آموزش خود را به ما بسپارید تا به هدف برسید.</p>
                     </div>
                     <div class="about-text">
@@ -290,10 +287,6 @@ padding: 2px;
                         <p class="contact-hint"> برای دریافت مشاوره رایگان و آشنایی با دوره‌ها، به <a
                                 href="contactus.php">صفحه
                                 تماس با ما</a> مراجعه کنید.</p>
-                    </div>
-                    <div id="manageres">
-                        <div><img src="Images/-2147483648_-210369.jpg" alt="error"><br><br><strong>نام مؤسس</strong><p>مهندس غلامعلی صائمی فرد</p></div>
-                        <div><img src="Images/logosci1Asset 4@4x.webp" alt="error"><br><br><strong>مدیر خواهران</strong><p>مهندس آزاده پور ذاکر عربانی</p></div>
                     </div>
                 </div>
             </section>
