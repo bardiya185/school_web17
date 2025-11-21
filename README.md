@@ -57,7 +57,9 @@ All libraries are already included in the project:
 ✔ Tippy.js  
 ✔ Custom JS + CSS  
 
-No installation needed.
+installation needed.
+
+## With npm install
 
 ---
 
