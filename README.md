@@ -39,7 +39,7 @@ You must install one of the following to run PHP:
 - Or any server supporting **PHP + MySQL**
 
 ### 🐘 **2. PHP**
-Minimum recommended:
+Minimum recommended:**PHP 7.4** or higher  
 
 ### 🗄️ **3. MySQL / MariaDB**
 Used to store project data.
