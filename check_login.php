@@ -2,11 +2,12 @@
 session_start();
 ?>
 <?php
+require_once 'config.php';
 if (isset($_POST['i1']) && isset($_POST['i2'])) {
     $username=$_POST['i1'];
     $password=$_POST['i2'];
 
-    $link=mysqli_connect("localhost","root","root","scidata",3306);
+    $link=mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     $link->set_charset("utf8");
     $myquery="SELECT `rowid`, `fandlname`, `username`, `phone`, `password` FROM `user` WHERE username='$username' AND password='$password'";
     $result=mysqli_query($link,$myquery);

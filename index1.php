@@ -4,7 +4,7 @@ if (isset($_POST['menus'])) {
     $_SESSION['menu'] = $_POST['menus'];
     exit;
 }
-
+require_once 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -82,7 +82,7 @@ if (isset($_POST['menus'])) {
                 </div>
                 <div id="spicial">
                     <?php
-                    $conn = mysqli_connect('localhost', 'root', 'root', 'scidata', 3306);
+                    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
                     $sql = "SELECT * FROM `product` ORDER BY product_view DESC LIMIT 3";
                     $result = mysqli_query($conn, $sql);
                     if ($result->num_rows > 0) {

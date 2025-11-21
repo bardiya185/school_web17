@@ -2,7 +2,7 @@
     if (isset($_POST['menus'])) {
         $_SESSION['menu'] = $_POST['menus'];
     }
-    $conn = mysqli_connect('localhost', 'root', 'root', 'scidata', 3306);
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     if (isset($_SESSION['menu'])) {
         $show_footer = true;
     }
@@ -258,10 +258,10 @@
         include("footer/footer.php");
     }
     ?>
-    <!--tippy-->
+    <!--py-->
     <script src="https://unpkg.com/popper.js@1"></script>
-    <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
-    <!--tippy-->
+    <script src="https://unpkg.com/py.js@5/dist/py-bundle.iife.js"></script>
+    <!--py-->
     <script src="header/header.js"></script>
     <?php include('check_login_alert.php'); ?>
 </body>
