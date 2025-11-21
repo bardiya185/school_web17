@@ -1,5 +1,5 @@
 # School_website17
-⭐School website make with🛑 HTML 🛑  CSS 🛑  Js  🛑 PHP 🛑  SweetAlert 🛑  Jquery 🛑 Tippy.js⭐
+School website make ⭐with  HTML 🛑  CSS 🛑  Js  🛑 PHP 🛑  SweetAlert 🛑  Jquery 🛑 Tippy.js⭐
 
 <h1 align="center">🌐 School Website Project</h1>
 <p align="center">
@@ -57,10 +57,10 @@ All libraries are already included in the project:
 ✔ Tippy.js  
 ✔ Custom JS + CSS  
 
-installation needed.
-
-## With npm install
-
+📥 **Install With :**
+```bash
+npm install
+```
 ---
 
 ## 🗃️ **Database Setup**
@@ -68,14 +68,13 @@ installation needed.
 1. Open **phpMyAdmin**  
 2. Create database:
 3. Import: database/scidata.sql
+4. Change config.php for math with phpMyAdmin
 ---
 
 ## 🚀 **Run the Project**
 
 1. Move the project folder to:
 2. Start **Apache + MySQL**  
-3. Visit:
-
 ---
 
 ## ⭐ **Features**
