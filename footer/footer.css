@@ -1,0 +1,388 @@
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #f9f2ed;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    align-self:flex-end;
+    align-items: end;
+    align-content: end;
+    flex-direction: row;
+    justify-content: center;
+    overflow: auto;
+
+  }
+  
+  #enemad {
+    width: 60px;
+    height: auto;
+    display: flex;
+    justify-self: left;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #enemad img {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    margin-top: 0px;
+    margin-right: 20px;
+  }
+  
+  #table_foter {
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    color: #202741;
+    line-height: 40px;
+    font-size: 16px;
+    gap: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #202741;
+  }
+  
+  li {
+    display: block;
+  }
+  
+  #fast_call {
+    width: auto;
+    text-align: center;
+  }
+  
+  #call {
+    width: 350px;
+    height: 100px;
+    text-wrap: wrap;
+  }
+  
+  #table_foter ul li {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 0px;
+  }
+  
+  #logo_foter {
+    width: 120px;
+    height: 220px;
+    background-color: #21355da6;
+    border-radius: 5px;
+    margin-right: 0px;
+    margin-top: 40px;
+    padding: 10px;
+    line-height: 30px;
+  }
+  
+  #logo_foter img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+  }
+  
+  .title1_forter {
+    width: auto;
+    border-bottom: 2px solid #ffb562;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .title2_forter {
+    width: 82px;
+    border-bottom: 2px solid #ffb562;
+    padding: 5px;
+  }
+  
+  #text_down_logo_foter {
+    text-align: center;
+    color: #f9f2ed;
+    font-weight: 600;
+  }
+  
+  #back_slider {
+    width: 100%;
+    height: 700px;
+    background-color: #101421;
+    z-index: 10;
+  }
+  
+  ul li #robika {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-self: center;
+    transition: 0.5s all;
+  }
+  
+  ul li #robika:hover {
+    filter: brightness(70%);
+  }
+  @media screen and (max-width: 1024px) {
+
+  footer {
+    width: 100%;
+    height: auto;
+    background-color: #f9f2ed;
+    top: 100%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #enemad {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    margin-left: 50px;
+  }
+
+  #enemad img {
+    width: 140px;
+    height: 140px;
+    display: block;
+    justify-self: center;
+  }
+
+  #table_foter {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    color: #202741;
+    line-height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #202741;
+  }
+
+  li {
+    display: block;
+  }
+
+  #fast_call {
+    width: auto;
+    text-align: center;
+  }
+
+  #call {
+    width: 350px;
+    height: 250px;
+    text-wrap: wrap;
+    text-align: center;
+    margin-left: 70px;
+  }
+
+  #n {
+    transform: scale(1.2);
+  }
+
+  #p {
+    transform: scale(1.2);
+  }
+
+  #table_foter ul li {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 0px;
+  }
+
+  #logo_foter {
+    width: 120px;
+    height: 220px;
+    background-color: #21355da6;
+    border-radius: 5px;
+    margin-right: 0px;
+    margin-top: 40px;
+    padding: 10px;
+    line-height: 30px;
+  }
+
+  #logo_foter img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  .title1_forter {
+    width: auto;
+    border-bottom: 2px solid #ffb562;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .title2_forter {
+    width: 82px;
+    border-bottom: 2px solid #ffb562;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+  }
+
+  #text_down_logo_foter {
+    text-align: center;
+    color: #f9f2ed;
+    font-weight: 600;
+  }
+
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+
+
+  footer {
+    width: 100%;
+    height: auto;
+    background-color: #f9f2ed;
+    top: 100%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #enemad {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-self: center;
+    align-content: center;
+    margin-left: auto;
+  }
+
+  #enemad img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-self: center;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  #table_foter {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    color: #202741;
+    line-height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #202741;
+  }
+
+  li {
+    display: block;
+  }
+
+  #fast_call {
+    width: auto;
+    text-align: center;
+  }
+
+  #call {
+    width: 80%;
+    height: auto;
+    text-wrap: wrap;
+    text-align: center;
+    margin-left: unset;
+    margin: auto;
+    margin-left: auto;
+  }
+
+  #call li {
+    margin-left: 30px;
+    text-align: center;
+    display: table;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+  }
+
+
+  #table_foter ul li {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 0px;
+  }
+
+  #logo_foter {
+    width: 120px;
+    height: 220px;
+    background-color: #21355da6;
+    border-radius: 5px;
+    margin-right: 0px;
+    margin-top: 40px;
+    padding: 10px;
+    line-height: 30px;
+  }
+
+  #logo_foter img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  .title1_forter {
+    width: auto;
+    border-bottom: 2px solid #ffb562;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .title2_forter {
+    width: auto;
+    border-bottom: 2px solid #ffb562;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    margin-left: 30px;
+  }
+
+  #text_down_logo_foter {
+    text-align: center;
+    color: #f9f2ed;
+    font-weight: 600;
+  }
+
+
+}

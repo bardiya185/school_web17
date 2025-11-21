@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#202741" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="description"
+        content="آموزشگاه فنی و حرفه ای آزاد صائمی فرد , آموزشگاه  , برنامه نویسی , طراحی وب , حسابداری , صنایع خودرو , تدریس دروس دانشگاهی , کامپیوتر , دوره مقدماتی , html , js , wordpress , php ,  ai , AI ,  css , هوش مصنوعی">
+        <link rel="icon" type="image/x-icon" href="Icons/favicon.ico">
+        <link rel="icon" type="image/png" href="Icons/icon.png">
+    <title>(SCI)آموزشگاه فنی و حرفه ای آزاد صائمی فرد</title>
+    <style>
+        @font-face {
+            font-family: iran;
+            src: url('font/IRANYekanXVF.woff');
+        }
+
+        * {
+            font-family: iran;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            background-color: transparent;
+        }
+
+
+
+        ::-webkit-scrollbar-thumb {
+            width: 0px;
+            height: 0px;
+            background-color: #202741;
+            border-radius: 30px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tahoma', sans-serif;
+            color: #fff;
+            background-color: #202741;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        /*HEADER*/
+
+
+        #box_first_img {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -10;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            position: absolute;
+            top: 0;
+        }
+
+        #img_first {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            filter: blur(4px);
+        }
+
+        #content {
+            height: auto;
+            display: none;
+            opacity: 0%;
+            transition: 0.5s 0s;
+        }
+
+        #loading_control {
+            position: fixed;
+            transform: translate(-50%, -50%) scale(1.5);
+            left: 50%;
+            top: 50%;
+            z-index: 100;
+        }
+
+        #loading {
+            width: auto;
+            height: 50px;
+        }
+
+
+        #box_title_rectangle {
+            width: 60%;
+            max-width: 800px;
+            height: auto;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-around;
+            justify-self: center;
+            align-items: center;
+            flex-direction: row;
+            direction: ltr;
+            margin-top: 50px;
+
+
+        }
+
+        #rectangle1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            text-align: center;
+            display: flex;
+            justify-self: left;
+            align-items: center;
+            background-color: #F9F2ED;
+            color: #F87474;
+            padding: 0 5px 0 5px;
+            border: 1px solid #FFB562;
+            font-size: 18px;
+            opacity: 0%;
+            transition: 0.2s 0s;
+        }
+
+        #rectangle2 {
+            width: 90px;
+            height: 100px;
+            border-radius: 5px;
+            text-align: center;
+            display: flex;
+            justify-self: left;
+            align-items: center;
+            padding: 0 10px 0 10px;
+            background-color: #F9F2ED;
+            color: #F87474;
+            border: 1px solid #FFB562;
+            font-size: 18px;
+            opacity: 0%;
+            transition: 0.2s 0s;
+            margin-left: 0px;
+        }
+
+        #plas {
+            width: 30px;
+            height: 0px;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            opacity: 0%;
+            transition: 0.2s 0s;
+        }
+
+        #move {
+            display: flex;
+            justify-self: center;
+            opacity: 0%;
+            transition: 0.2s 0s;
+            transform: rotate(-90deg);
+            align-self: center;
+        }
+
+        #rectangle3 {
+            width: 80px;
+            height: 130px;
+            border-radius: 5px;
+            text-align: center;
+            display: flex;
+            justify-self: right;
+            align-items: center;
+            padding: 0 15px 0 15px;
+            background-color: #F87474;
+            color: #F9F2ED;
+            border: 1px solid #FFB562;
+            margin-top: 0px;
+            opacity: 0%;
+            transition: 0.2s 0s;
+        }
+
+        #box_title_text {
+            width: 400px;
+            height: auto;
+            position: absolute;
+            transform: translate(-0%, -40%);
+            top: 35%;
+            right: 10%;
+            font-size: 40px;
+            opacity: 0%;
+            transition: 1s 0s;
+        }
+
+        #box_logo1 {
+            width: 200px;
+            height: auto;
+            z-index: 30;
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            margin-top: 40px;
+        }
+
+        #box_logo1 img {
+            width: 100px;
+            height: auto;
+
+        }
+
+
+        #box_logo2 {
+            width: auto;
+            height: 700px;
+            z-index: 30;
+            opacity: 0%;
+            transition: 0.5s 0s;
+            height: auto;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+            display: block;
+        }
+
+        #box_logo2 img {
+            width: 180px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+        }
+
+
+        #box_text {
+            width: 60%;
+            max-width: 500px;
+            height: auto;
+            display: flex;
+            padding: 5px;
+            font-size: 25px;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            margin-top: 50px;
+            border-radius: 10px;
+            background-color: #F87474;
+            font-weight: 600;
+            transition: 0.2s 0s;
+        }
+
+        #box_text:hover {
+            background-color: #fb9292;
+        }
+
+
+        #box_text img {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            border-bottom: 2px solid #ac5252;
+            padding-bottom: 5px;
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+
+        @media screen and (max-width:1024px) {
+
+            #box_title_rectangle {
+                width: 80%;
+                max-width: 80%;
+                height: auto;
+                font-size: 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                align-content: center;
+                direction: ltr;
+                margin-top: 50px;
+            }
+
+            #rectangle1 {
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                justify-self: left;
+                align-items: center;
+                background-color: #F9F2ED;
+                color: #F87474;
+                padding: 0 5px 0 5px;
+                border: 1px solid #FFB562;
+                font-size: 18px;
+
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+            #rectangle2 {
+                width: 90px;
+                height: 100px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                justify-self: right;
+                align-items: center;
+                padding: 0 10px 0 10px;
+                background-color: #F9F2ED;
+                color: #F87474;
+                border: 1px solid #FFB562;
+                font-size: 18px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+            #plas {
+                width: 30px;
+                height: 0px;
+                display: flex;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+            #move {
+                display: flex;
+                margin-top: 0px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+            #rectangle3 {
+                width: 80px;
+                height: 130px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                justify-self: center;
+                align-items: center;
+                padding: 0 15px 0 15px;
+                background-color: #F87474;
+                color: #F9F2ED;
+                border: 1px solid #FFB562;
+                margin-top: 20px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+
+            #box_logo {
+                position: absolute;
+                transform: translateX(50%);
+                right: 50%;
+                top: 15%;
+            }
+
+
+
+
+        }
+
+
+
+        @media screen and (max-width:768px) {
+
+
+
+            #box_title_rectangle {
+                width: 90%;
+                max-width: 100%;
+                display: block;
+                flex-wrap: wrap;
+                direction: ltr;
+                margin-top: 100px;
+                transform: scale(0.8);
+
+            }
+
+            #rectangle1 {
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                justify-self: left;
+                align-items: center;
+                background-color: #F9F2ED;
+                color: #F87474;
+                padding: 0 5px 0 5px;
+                border: 1px solid #FFB562;
+                font-size: 18px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+            #rectangle2 {
+                width: 90px;
+                height: 100px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                justify-self: right;
+                align-items: center;
+                align-self: flex-start;
+                padding: 0 10px 0 10px;
+                background-color: #F9F2ED;
+                color: #F87474;
+                border: 1px solid #FFB562;
+                font-size: 18px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+                margin-left: 0px;
+                margin-top: -100px;
+            }
+
+            #plas {
+                width: 30px;
+                height: 0px;
+                display: flex;
+                align-items: start;
+                align-content: start;
+                justify-content: center;
+                justify-self: center;
+                margin-top: -70px;
+                margin-bottom: 70px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+            #move {
+                display: flex;
+                justify-self: center;
+                opacity: 0%;
+                transition: 0.2s 0s;
+                transform: rotate(0deg);
+                align-self: center;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            #rectangle3 {
+                width: 80px;
+                height: 130px;
+                border-radius: 5px;
+                text-align: center;
+                display: flex;
+                justify-self: center;
+                align-items: center;
+                padding: 0 15px 0 15px;
+                background-color: #F87474;
+                color: #F9F2ED;
+                border: 1px solid #FFB562;
+                margin-top: 0px;
+                opacity: 0%;
+                transition: 0.2s 0s;
+            }
+
+
+            #box_logo {
+                position: absolute;
+                transform: translateX(50%);
+                right: 50%;
+                top: 15%;
+            }
+
+            #box_first_img {
+                width: 100%;
+                height: 100vh;
+            }
+
+            #box_text {
+                width: 80%;
+                height: auto;
+                display: flex;
+                padding: 0px;
+                font-size: calc(2vw + 50%);
+                text-align: center;
+                justify-content: center;
+                justify-items: center;
+                justify-self: center;
+                margin-top: 50px;
+                margin-bottom: -50px;
+                border-radius: 10px;
+                background-color: #F87474;
+                line-height: 40px;
+            }
+
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="loading_control">
+        <img id="loading" src="Images/com-optimize-1--unscreen-ezgif.com-optimize.gif" alt="error">
+    </div>
+    <div id="box_logo2">
+        <img src="Images/logosci1Asset 4@4x.webp" alt="error">
+    </div>
+    <div id="content">
+        <main>
+            <div id="box_logo1">
+                <img src="Images/logosciAsset 5@4x.webp" alt="error">
+            </div>
+            <div id="box_text">
+                <a style="color:#2d1616; text-decoration: none;" href="index1.php">
+                    <img src="Icons/Asset 504x.svg" alt="error">
+                    <p>آموزشگاه فنی و حرفه ای آزاد صائمی فرد</p>
+                </a>
+            </div>
+            <div id="box_title_rectangle">
+                <div id="rectangle1">مهندسی مجرب</div>
+                <i id="plas">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24.553" height="25.166" viewBox="0 0 24.553 25.166">
+                        <g id="Group_25" data-name="Group 25" transform="translate(-334 -448)">
+                            <path id="Path_6" data-name="Path 6" d="M0,0H21.553" transform="translate(335.5 460.549)"
+                                fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" />
+                            <line id="Line_3" data-name="Line 3" y2="22.166" transform="translate(346.079 449.5)"
+                                fill="none" stroke="#ffb562" stroke-linecap="round" stroke-width="3" />
+                        </g>
+                    </svg>
+                </i>
+                <div id="rectangle2">کلاس های با کیفیت</div>
+                <i id="move">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.557" height="48.535" viewBox="0 0 22.557 48.535">
+                        <line id="Line_4" data-name="Line 4" x2="0.031" y2="6" transform="translate(5.248 13.5)"
+                            fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" />
+                        <line id="Line_5" data-name="Line 5" x1="0.031" y2="20" transform="translate(17.278 3.5)"
+                            fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" />
+                        <line id="Line_6" data-name="Line 6" y2="12" transform="translate(11.279 1.5)" fill="none"
+                            stroke="#9a9a9a" stroke-linecap="round" stroke-width="3" />
+                        <g id="Polygon_1" data-name="Polygon 1" transform="translate(22.557 48.535) rotate(180)"
+                            fill="#ffb562">
+                            <path
+                                d="M 19.09318542480469 18.03518676757812 L 3.464104652404785 18.03518676757812 C 3.212934494018555 18.03518676757812 3.084994554519653 17.8785572052002 3.031094551086426 17.78518676757812 C 2.977184534072876 17.69181823730469 2.905504465103149 17.50270652770996 3.031094551086426 17.28518676757812 L 10.84563446044922 3.74999737739563 C 10.97121429443359 3.532477378845215 11.1708345413208 3.49999737739563 11.27864456176758 3.49999737739563 C 11.38645458221436 3.49999737739563 11.58607482910156 3.532477378845215 11.71165466308594 3.74999737739563 L 19.52619361877441 17.28518676757812 C 19.65178489685059 17.50270652770996 19.58010482788086 17.69181823730469 19.52620506286621 17.78518676757812 C 19.47229385375977 17.87854766845703 19.3443546295166 18.03518676757812 19.09318542480469 18.03518676757812 Z"
+                                stroke="none" />
+                            <path
+                                d="M 11.27864742279053 6.000001907348633 L 5.196161270141602 16.53518676757812 L 17.36112976074219 16.53518676757812 L 11.27864742279053 6.000001907348633 M 11.27864456176758 2 C 11.95221996307373 2 12.62579441070557 2.333332061767578 13.01069450378418 2.999998092651367 L 20.82523536682129 16.53518676757812 C 21.59503364562988 17.86851692199707 20.63278388977051 19.53518676757812 19.09318542480469 19.53518676757812 L 3.464103698730469 19.53518676757812 C 1.924505233764648 19.53518676757812 0.9622440338134766 17.86851692199707 1.732053756713867 16.53518676757812 L 9.546594619750977 2.999998092651367 C 9.93149471282959 2.333332061767578 10.60506916046143 2 11.27864456176758 2 Z"
+                                stroke="none" fill="#ffb562" />
+                        </g>
+                    </svg>
+                </i>
+                <div id="rectangle3">کارآموز ماهر</div>
+            </div>
+            <div id="box_first_img">
+                <img id="img_first" src="Images/background.webp" alt="error">
+            </div>
+        </main>
+    </div>
+    <script>
+
+
+        //loading//
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('loading');
+            const content = document.getElementById('content');
+            content.style.display = 'block';
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 500);
+
+            setTimeout(function () {
+                box_logo2.style.opacity = "100%";
+            }, 600);
+
+            setTimeout(function () {
+                box_logo2.style.opacity = "0%";
+                content.style.opacity = '100%';
+            }, 1000);
+
+            setTimeout(function () {
+                rectangle1.style.opacity = '100%';
+            }, 1100);
+            setTimeout(function () {
+                plas.style.opacity = '100%';
+            }, 1150);
+            setTimeout(function () {
+                rectangle2.style.opacity = '100%';
+            }, 1300);
+            setTimeout(function () {
+                move.style.opacity = '100%';
+            }, 1400);
+            setTimeout(function () {
+                rectangle3.style.opacity = '100%';
+            }, 1500);
+            setTimeout(function () {
+                rectangle3.style.boxShadow = '0px 0px 30px 1px #F87474';
+            }, 1700);
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

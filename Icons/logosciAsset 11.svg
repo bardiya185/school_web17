@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142.22 142.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #4fbdd7;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Arzhan, Arzhan;
+        font-size: 29px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" width="142.22" height="142.22" rx="14.89" ry="14.89"/>
+      <text class="cls-2" transform="translate(26.19 63.51)"><tspan x="0" y="0">WORD</tspan><tspan x="-3.92" y="40">PRESS</tspan></text>
+    </g>
+  </g>
+</svg>

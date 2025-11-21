@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142.22 142.22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-4, .cls-3 {
+        fill: #e5e5e5;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #ff8001;
+        font-family: Arzhan, Arzhan;
+        font-size: 24px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-4" width="142.22" height="142.22" rx="14.89" ry="14.89"/>
+      <g>
+        <path class="cls-2" d="m27.53,34.78h87.16c1.46,0,2.64,1.06,2.64,2.38v57.06c0,1.31-1.18,2.38-2.64,2.38H27.53c-1.46,0-2.64-1.06-2.64-2.38v-57.06c0-1.31,1.18-2.38,2.64-2.38Z"/>
+        <line class="cls-3" x1="24.89" y1="85.74" x2="117.33" y2="85.74"/>
+        <rect class="cls-5" x="69.97" y="90.22" width="7.13" height="1.77"/>
+        <line class="cls-1" x1="65.83" y1="96.59" x2="61.87" y2="104.38"/>
+        <line class="cls-1" x1="80.15" y1="96.59" x2="84.11" y2="104.38"/>
+        <rect class="cls-1" x="55.48" y="104.38" width="34.78" height="3.07"/>
+      </g>
+      <text class="cls-6" transform="translate(41.36 72.32)"><tspan x="0" y="0">ICDL</tspan></text>
+    </g>
+  </g>
+</svg>
