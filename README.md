@@ -68,7 +68,7 @@ npm install
 1. Open **phpMyAdmin**  
 2. Create database:
 3. Import: database/scidata.sql
-4. Change config.php for math with phpMyAdmin
+4. Change config.php file for math with your phpMyAdmin
 ---
 
 ## 🚀 **Run the Project**
