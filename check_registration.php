@@ -2,13 +2,14 @@
 session_start();
 ?>
 <?php
+require_once 'config.php';
 if (isset($_POST['i1']) && isset($_POST['i2']) && isset($_POST['i3']) && isset($_POST['i4'])) {
     $fullname=$_POST['i1'];
     $username=$_POST['i2'];
     $phone=$_POST['i3'];
     $password=$_POST['i4'];
 
-    $link=mysqli_connect("localhost","root","root","scidata",3306);
+    $link=mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     $link->set_charset("utf8");
     
     $myquerymain="SELECT `rowid`, `fandlname`, `username`, `phone`, `password` FROM `user` WHERE fandlname='$fullname' AND username='$username' AND phone='$phone' AND password='$password'";
@@ -18,7 +19,7 @@ if (isset($_POST['i1']) && isset($_POST['i2']) && isset($_POST['i3']) && isset($
         exit();
     }
     else{
-        $link=mysqli_connect("localhost","root","root","scidata",3306);
+        $link=mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
         $link->set_charset("utf8");
         $myquery1="SELECT `rowid`, `fandlname`, `username`, `phone`, `password` FROM `user` WHERE username='$username'";
         $result1=mysqli_query($link,$myquery1);
