@@ -2,7 +2,10 @@
     if (isset($_POST['menus'])) {
         $_SESSION['menu'] = $_POST['menus'];
     }
+<<<<<<< HEAD
     require_once 'config.php';
+=======
+>>>>>>> 40541836bc61328271998bf133fdc54a193f7a83
     $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     if (isset($_SESSION['menu'])) {
         $show_footer = true;
@@ -258,12 +261,21 @@
         include("footer/footer.php");
     }
     ?>
+<<<<<<< HEAD
     <?php include('check_login_alert.php'); ?>
     <script src="header/header.js"></script>
     <!--py-->
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
     <!--py-->
+=======
+    <!--py-->
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/py.js@5/dist/py-bundle.iife.js"></script>
+    <!--py-->
+    <script src="header/header.js"></script>
+    <?php include('check_login_alert.php'); ?>
+>>>>>>> 40541836bc61328271998bf133fdc54a193f7a83
 </body>
 
 </html>
