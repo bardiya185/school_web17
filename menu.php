@@ -2,10 +2,9 @@
     if (isset($_POST['menus'])) {
         $_SESSION['menu'] = $_POST['menus'];
     }
-<<<<<<< HEAD
+
     require_once 'config.php';
-=======
->>>>>>> 40541836bc61328271998bf133fdc54a193f7a83
+
     $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     if (isset($_SESSION['menu'])) {
         $show_footer = true;
