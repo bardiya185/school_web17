@@ -220,7 +220,8 @@
 
 <body>
     <?php
-    $conn = mysqli_connect('localhost', 'root', 'root', 'scidata', 3306);
+    require_once 'config.php';
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     $search_text = '';
 
     if (isset($_POST['search'])) {

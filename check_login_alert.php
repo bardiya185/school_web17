@@ -2,11 +2,12 @@
 
 $login = '';
 $color = '';
+require_once 'config.php';
 if (isset($_COOKIE['user_auto_login'])) {
     if ($_COOKIE['user_auto_login'] != '') {
         $login = 'true';
         //
-        $conn = mysqli_connect("localhost", "root", "root", "scidata", 3306);
+        $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
         $sql = "SELECT color_profile FROM `user` WHERE username='$_COOKIE[user_auto_login]'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) == 1) {
@@ -16,7 +17,7 @@ if (isset($_COOKIE['user_auto_login'])) {
         }
         //
         if (isset($_POST['change_color'])) {
-            $conn = mysqli_connect("localhost", "root", "root", "scidata", 3306);
+            $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
             $sql = "UPDATE  `user`  SET color_profile = '$_POST[change_color]'  WHERE username='$_COOKIE[user_auto_login]'";
             $result = mysqli_query($conn, $sql);
             //
@@ -71,9 +72,9 @@ if (isset($_COOKIE['user_auto_login'])) {
         }, 500);
     }
     if (login == 'true') {
-        // tippy('#btn_in', {
-        //     content: `${username}`
-        // });
+        tippy('#btn_in', {
+            content: `${username}`
+        });
         btn_in.innerHTML = username.charAt(0);
         box_btn_in.style.left = '90px';
         btn_in.style.fontSize = '17px';
